@@ -1,2 +1,18 @@
 # restaurant-page
-A website rendered using only DOM manipulation. Each website section will be created using DOM elements and styled using CSS
+A website rendered using only DOM manipulation. Each website section will be created using DOM elements and styled using CSS.
+
+## Goals
+One of the main goals in doing this project is to practice using the new ES6 modules and Webpack to create a website where code can be split into modules and bundled. It solves the problem of having files be too long and having to keep track of modules and packages used in your project. Along with these new tools I've learned, I will also get a chance to practice utilizing npm, a packet manager where codes stored as packages can be downloaded and implemented easily from the command line. Webpack is also a package which relies on npm to make installing and implementing its code more efficient. 
+
+As for the actual content of the website, the goal is to practice my DOM manipulation by using only DOM elements to render the sections of the restaurant page. From the home to contact sections, every single element will be created using the DOM method and appended. While not exactly a good practice it is a good way to practice DOM manipulation while practicing my new knowledge. Modularization is an important part of coding as projects get larger and more complex, and ES6 modules and Webpack are the cure to this problem.
+
+## ES6 Modules, Webpack, and npm
+Having done the Tic Tac Toe project prior to learning about ES6 modules and webpack, the issues of the module pattern and keeping track of your code becomes glaringly obvious. Unlike ES6 modules, you don't have the import and export declarations to modularize code which can become a real pain once you need to create complex projects. IIFEs needing to return global code can also become really confusing when you have a lot of code, and it is less intuitive than just using ES6 modules. To add on to that, ES6 modules also has the ability to use namespace and allow both default and named modules which makes code understandable. In other words, ES6 modules does everything the module pattern can but better.
+
+Webpack then comes in and solves the problem of having too many modules as they bundle up not only JavaScript, but assets, CSS, and HTML too. Finally, no more having to bundle up your code yourself like with the module pattern. Npm then comes in and  will keep track of your package dependencies for you, so you won't have to worry sharing code with packages to other people. Other people will just have to run `npm install` to get all the dependencies for you project. This dream team will not only make your code cleaner, it can also optimize your code for you and track any packages so you don't have to waste time doing any mundane tasks. Not only will you save time, but your code will also become cleaner and more understandable once you learn and implement these tools into your project!
+
+In other words, learning and practicing these new knowledge is fundamental to being able to code more efficiently in JavaScript. This is why this project was created as it's not only easy to understand, but it also focuses on what I've learned without any chances for distraction. As my skill in JavaScript grows and the projects get larger and more complex, tools like these will need to become second nature to me if I want to grow and become a successful programmer.
+
+## Closing Statements
+
+It has been a couple of months since I've started on my programming journey with [The Odin Project](https://www.theodinproject.com), and even when there were setbacks along the way I am proud of myself for staying on track and being persistent yet patient. If you want to learn programming, I would highly recommend the curriculum and hopefully I can look back to this day as a successful person in life. Anyways thank you for reading and I'll see you in the next project (hopefully)!
