@@ -1,13 +1,18 @@
 import homeImage from './assets/home-image.png';
 
 export default function homeLoad() {
-    const header = document.createElement('h1');
+    const content = document.querySelector('#content');
+
     const image = document.createElement('img');
     const imageCredit = document.createElement('p');
     const headline = document.createElement('h2');
     const paragraphOne = document.createElement('p');
     const paragraphTwo = document.createElement('p');
     const orderButton = document.createElement('button');
+
+    headline.classList.add('headline');
+    imageCredit.classList.add('image-credit');
+    orderButton.classList.add('order-button');
 
     image.src = homeImage;
     image.setAttribute('alt', "Our famous Nevada burrito and fresh coconut");
@@ -38,17 +43,15 @@ export default function homeLoad() {
     imageCredit.appendChild(imageCreditTextThree);
     imageCredit.appendChild(imageSiteTwo);
 
-    header.textContent = 'Nevada TaCoCo.';
     headline.textContent = 'An oasis in the desert';
     paragraphOne.textContent = 'Welcome to Nevada TaCoCo., where bold flavors meet local roots. Our menu blends authentic and Americanized Mexican cuisine with a fresh Caribbean twist, featuring locally sourced ingredients and Nevada-inspired favorites like the Nevada Burrito. Committed to our community, we proudly support local farmers and give back through charity efforts focused on Nevada and the states we serve.';
     paragraphTwo.textContent = 'Whether you\'re craving a classic favorite or something new with a tropical twist, our fresh, locally sourced dishes are made to satisfy. And don\'t forget to to pair your meal with our signature fresh coconut drink for the ultimate flavor experience—cool, refreshing, and uniquely Nevada TaCoCo. There really is nothing quite like it, just like an oasis in the desert! Order now and let us bring bold, unforgettable flavors straight to your table!';
     orderButton.textContent = 'Order Now';
     
-    document.body.appendChild(header);
-    document.body.appendChild(image);
-    document.body.appendChild(imageCredit);
-    document.body.appendChild(headline);
-    document.body.appendChild(paragraphOne);
-    document.body.appendChild(paragraphTwo);
-    document.body.appendChild(orderButton);
+    content.appendChild(headline);
+    content.appendChild(image);
+    content.appendChild(imageCredit);
+    content.appendChild(paragraphOne);
+    content.appendChild(paragraphTwo);
+    content.appendChild(orderButton);
 }
