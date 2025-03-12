@@ -1,3 +1,6 @@
+import tacocoNutSalsa from './assets/menu-images/tacoco-nut-salsa.jpg';
+import moltenQuesoBlancoFundido from './assets/menu-images/molten-queso-fundido.jpg'
+
 export default function menuLoad() {
     const content = document.querySelector('#content');
     const menu = [
@@ -5,12 +8,14 @@ export default function menuLoad() {
             category: 'Appetizers',
             name: 'TacoCo Nut Salsa',
             description: 'A vibrant blend of fire-roasted tomatoes, coconut, charred pineapple, and habanero, bringing a bold fusion of smoky, sweet, and spicy flavors. Served with our signature toasted coconut-dusted tortilla chips.',
+            image: tacocoNutSalsa,
             price: 6.99,
         },
         {
             category: 'Appetizers',
             name: 'Molten Queso Blanco Fundido',
             description: 'A rich, melty blend of Oaxaca, Asadero, and Queso Blanco with roasted poblano peppers, caramelized onions, and a hint of coconut milk for a silky-smooth texture. Served in a sizzling cast-iron skillet with our signature toasted coconut-dusted tortilla chips.',
+            image: moltenQuesoBlancoFundido,
             price: 7.99,
         },
         {
@@ -76,13 +81,13 @@ export default function menuLoad() {
         {
             category: 'Desserts',
             name: 'Coconut Tres Leches Cake',
-            description: 'Super-moist tres leches cake soaked in coconut milk, sweet cream, and condensed milk, topped with whipped cream and toasted coconut flakes. Served with a side of fresh mango slices.',
+            description: 'Super-moist tres leches cake soaked in coconut milk, sweet cream, and condensed milk, topped with whipped cream and toasted coconut flakes. Topped with a fresh mango.',
             price: 7.99,
         },
         {
             category: 'Desserts',
             name: 'Churro Nachos',
-            description: 'Crispy churro chips dusted in cinnamon sugar, drizzled with Mexican chocolate sauce and coconut caramel. Served with a side of dulce de leche whipped cream for dipping.',
+            description: 'Crispy churro chips dusted in cinnamon sugar, topped with dulce de leche whipped cream . Served with a side of Mexican chocolate sauce.',
             price: 8.99,
         },
         {
@@ -115,8 +120,7 @@ export default function menuLoad() {
                     content.appendChild(categoryHeading);
                     categories.push(item[property]);
                 }
-            }
-            if (property === 'name') {
+            } else if (property === 'name') {
                 const itemName = document.createElement('h3');
                 itemName.textContent = item[property];
 
@@ -126,6 +130,12 @@ export default function menuLoad() {
                 itemPrice.textContent = item[property];
 
                 content.appendChild(itemPrice);
+            } else if (property === 'image') {
+                console.log(item[property])
+                const itemImage = document.createElement('img');
+                itemImage.src = item[property];
+
+                content.appendChild(itemImage);
             } else {
                 if (property === 'category') continue;
 
