@@ -111,6 +111,13 @@ export default function menuLoad() {
     content.appendChild(heading);
 
     menu.forEach((item) => {
+        const itemContainer = document.createElement('div');
+        const itemContainerLeft = document.createElement('div');
+        itemContainer.classList.add('item-container');
+        itemContainerLeft.classList.add('item-container-left');
+
+        itemContainer.appendChild(itemContainerLeft);
+
         for (let property in item) {
             if (property === 'category') {
                 if (categories.find(item => item.category === item[property]) === undefined) {
@@ -124,26 +131,26 @@ export default function menuLoad() {
                 const itemName = document.createElement('h3');
                 itemName.textContent = item[property];
 
-                content.appendChild(itemName);
+                itemContainerLeft.appendChild(itemName);
             } else if (property === 'price') {
                 const itemPrice = document.createElement('h3');
                 itemPrice.textContent = item[property];
 
-                content.appendChild(itemPrice);
+                itemContainerLeft.appendChild(itemPrice);
             } else if (property === 'image') {
                 console.log(item[property])
                 const itemImage = document.createElement('img');
                 itemImage.src = item[property];
 
-                content.appendChild(itemImage);
-            } else {
-                if (property === 'category') continue;
-
+                itemContainer.appendChild(itemImage);
+            } else if (property === 'description') {
                 const itemText = document.createElement('p');
                 itemText.textContent = item[property];
 
-                content.appendChild(itemText);
+                itemContainerLeft.appendChild(itemText);
             }
         }
+
+        content.appendChild(itemContainer);
     });
 }
