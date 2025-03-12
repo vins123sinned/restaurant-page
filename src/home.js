@@ -11,6 +11,7 @@ export default function homeLoad() {
     const orderButton = document.createElement('button');
 
     headline.classList.add('headline');
+    image.classList.add('home-image');
     imageCredit.classList.add('image-credit');
     orderButton.classList.add('order-button');
 
