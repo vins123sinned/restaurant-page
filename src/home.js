@@ -11,10 +11,10 @@ export default function homeLoad() {
     const orderButton = document.createElement('button');
 
     headline.classList.add('headline');
-    image.classList.add('home-image');
+    image.classList.add('main-image');
     imageCredit.classList.add('image-credit');
-    paragraphOne.classList.add('home-para');
-    paragraphTwo.classList.add('home-para');
+    paragraphOne.classList.add('text-para');
+    paragraphTwo.classList.add('text-para');
     orderButton.classList.add('order-button');
 
     image.src = homeImage;

@@ -12,6 +12,10 @@ export default function aboutLoad() {
     const introThree = document.createElement('p');
 
     headline.classList.add('headline');
+    image.classList.add('main-image');
+    introOne.classList.add('text-para');
+    introTwo.classList.add('text-para');
+    introThree.classList.add('text-para');
 
     image.src = aboutImage;
     image.width = '720';
@@ -27,10 +31,10 @@ export default function aboutLoad() {
     introThree.textContent = 'We’re not just about making incredible food, we’re about the people who enjoy it. Our commitment goes beyond bold flavors and fresh, locally sourced ingredients; it’s about creating a welcoming space where everyone feels at home. From supporting our communities to staying true to our roots, we take pride in serving more than just meals. We serve experiences.';
 
     content.appendChild(headline);
-    content.appendChild(imageCredit);
     content.appendChild(introOne);
     content.appendChild(introTwo);
     content.appendChild(image);
     imageCredit.appendChild(imageAuthor);
+    content.appendChild(imageCredit);
     content.appendChild(introThree);
 }
