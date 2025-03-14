@@ -44,24 +44,21 @@ button:hover {
     cursor: pointer;
 }
 
-p {
-    max-width: clamp(75ch, 50%, 1000px);
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin: 1.5rem auto;
-}
-
 .tabs {
     display: flex;
     justify-content: space-around;
     height: 3rem;
 }
 
-.tabs button, .restaurant-title {
+.tabs button, 
+.restaurant-title {
     background-color: rgb(255, 255, 255, 0.8);
 }
 
-.tabs button, .restaurant-title, .headline {
+.tabs button, 
+.restaurant-title, 
+.headline, 
+.category-heading {
     font-family: 'introRust', 'Courier New', Courier, monospace;
     color: #68402e;
 }
@@ -97,7 +94,6 @@ p {
 }
 
 /* Home Styling */
-
 .headline {
     font-size: 2.25rem;
 }
@@ -107,10 +103,16 @@ p {
     border-radius: 5px;
 }
 
-
 .image-credit {
     font-size: 0.75rem;
     margin: 0 auto;
+}
+
+.home-para {
+    max-width: clamp(75ch, 50%, 1000px);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 1.5rem auto;
 }
 
 .order-button {
@@ -123,4 +125,57 @@ p {
     border-radius: 10px;
     padding: 0.75rem;
     margin: 1rem 0 3rem 0;
+}
+
+/* menu styling */
+.menu-heading {
+    font-size: 4rem;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 25vh;
+    margin: 5rem auto;
+}
+
+.item-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-heading {
+    color: #000000;
+}
+
+.item-name,
+.item-description,
+.item-price {
+    text-align: left;
+    margin: 0;
+}
+
+.item-name,
+.item-description {
+    margin-bottom: 1rem;
+}
+
+.item-name {
+    font-size: 2rem;
+}
+
+.item-description {
+    font-size: 1.5rem;
+    width: 700px;
+}
+
+.item-price {
+    font-size: 1.5rem;
+}
+
+.item-image {
+    height: 100%;
+    border-radius: 5px;
 }

@@ -112,7 +112,7 @@ export default function menuLoad() {
         {
             category: 'Desserts',
             name: 'Churro Nachos',
-            description: 'Crispy churro chips dusted in cinnamon sugar, topped with dulce de leche whipped cream . Served with a side of Mexican chocolate sauce.',
+            description: 'Crispy churro chips dusted in cinnamon sugar, topped with dulce de leche whipped cream. Served with a side of Mexican chocolate sauce.',
             price: 8.99,
             image: churroNachos,
         },
@@ -134,8 +134,18 @@ export default function menuLoad() {
     const categories = [];
 
     const heading = document.createElement('h1');
-    heading.textContent = 'Menu';
+    const imageCredit = document.createElement('p');
+    const imageAuthor = document.createElement('a');
 
+    imageCredit.classList.add('image-credit');
+    heading.classList.add('headline', 'menu-heading');
+
+    imageCredit.textContent = 'Photos created using ';
+    heading.textContent = 'Menu';
+    imageAuthor.href = 'https://stability.ai/stable-image';
+    imageAuthor.textContent = 'Stable Diffusion 3.5 Turbo Large';
+
+    imageCredit.appendChild(imageAuthor);
     content.appendChild(heading);
 
     menu.forEach((item) => {
@@ -148,8 +158,9 @@ export default function menuLoad() {
 
         for (let property in item) {
             if (property === 'category') {
-                if (categories.find(item => item.category === item[property]) === undefined) {
+                if (categories.includes(item[property]) === false) {
                     const categoryHeading = document.createElement('h2');
+                    categoryHeading.classList.add('category-heading');
                     categoryHeading.textContent = item[property];
 
                     content.appendChild(categoryHeading);
@@ -157,30 +168,35 @@ export default function menuLoad() {
                 }
             } else if (property === 'name') {
                 const itemName = document.createElement('h3');
+                itemName.classList.add('item-name');
                 itemName.textContent = item[property];
 
                 itemContainerLeft.appendChild(itemName);
+            } else if (property === 'description') {
+                const itemDescription = document.createElement('p');
+                itemDescription.classList.add('item-description');
+                itemDescription.textContent = item[property];
+
+                itemContainerLeft.appendChild(itemDescription);
             } else if (property === 'price') {
                 const itemPrice = document.createElement('h3');
+                itemPrice.classList.add('item-price');
                 itemPrice.textContent = item[property];
 
                 itemContainerLeft.appendChild(itemPrice);
             } else if (property === 'image') {
                 console.log(item[property])
                 const itemImage = document.createElement('img');
-
-                itemImage.setAttribute('width', '300');
+                itemImage.classList.add('item-image');
+                itemImage.setAttribute('height', '30');
                 itemImage.src = item[property];
 
                 itemContainer.appendChild(itemImage);
-            } else if (property === 'description') {
-                const itemText = document.createElement('p');
-                itemText.textContent = item[property];
-
-                itemContainerLeft.appendChild(itemText);
-            }
+            } 
         }
 
         content.appendChild(itemContainer);
     });
+
+    content.appendChild(imageCredit);
 }

@@ -13,6 +13,8 @@ export default function homeLoad() {
     headline.classList.add('headline');
     image.classList.add('home-image');
     imageCredit.classList.add('image-credit');
+    paragraphOne.classList.add('home-para');
+    paragraphTwo.classList.add('home-para');
     orderButton.classList.add('order-button');
 
     image.src = homeImage;
