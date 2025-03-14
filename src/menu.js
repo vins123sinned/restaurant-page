@@ -133,20 +133,20 @@ export default function menuLoad() {
     ];
     const categories = [];
 
-    const heading = document.createElement('h1');
+    const headline = document.createElement('h1');
     const imageCredit = document.createElement('p');
     const imageAuthor = document.createElement('a');
 
     imageCredit.classList.add('image-credit');
-    heading.classList.add('headline', 'menu-heading');
+    headline.classList.add('headline', 'menu-heading');
 
     imageCredit.textContent = 'Photos created using ';
-    heading.textContent = 'Menu';
+    headline.textContent = 'Menu';
     imageAuthor.href = 'https://stability.ai/stable-image';
     imageAuthor.textContent = 'Stable Diffusion 3.5 Turbo Large';
 
     imageCredit.appendChild(imageAuthor);
-    content.appendChild(heading);
+    content.appendChild(headline);
 
     menu.forEach((item) => {
         const itemContainer = document.createElement('div');

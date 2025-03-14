@@ -5,7 +5,7 @@ export default function homeLoad() {
 
     const image = document.createElement('img');
     const imageCredit = document.createElement('p');
-    const headline = document.createElement('h2');
+    const headline = document.createElement('h1');
     const paragraphOne = document.createElement('p');
     const paragraphTwo = document.createElement('p');
     const orderButton = document.createElement('button');
